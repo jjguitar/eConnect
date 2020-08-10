@@ -38,12 +38,24 @@ module.exports = {
           'sass-loader',
         ],
       },
+      {
+        test: /\.(png|gif|jpg|ico)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: 'assets/img/[hash].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
   plugins: [
     new HtmlWebPackPlugin({
       template: './public/index.html',
       filename: './index.html',
+      favicon: './public/favicon.ico',
     }),
     new MiniCssExtractPlugin({
       filename: 'assets/[name].css',

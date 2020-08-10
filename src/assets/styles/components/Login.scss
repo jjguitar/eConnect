@@ -1,0 +1,33 @@
+@import '../global_var.scss';
+
+// Propiedades y selectores deben ordenarse de la siguiente forma:
+// Propiedades del modelo de caja (display, width, height, margin, etc)
+// Posicionamiento (position, left, top, right, etc)
+// Tipografía(text-transform, text-decoration)
+// Decoración (background-image, color, etc)
+// Variables
+// Mixins
+
+.login {
+  width: 400px;
+  height: 600px;
+  display: flex;
+  border: 1px solid $main-dark;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  .login__form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    button {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    svg {
+      margin-left: 10px;
+    }
+  }
+}

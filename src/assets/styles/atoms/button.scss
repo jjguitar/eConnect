@@ -1,0 +1,16 @@
+button {
+  border: none;
+  border-radius: 25px;
+  height: 50px;
+  width: 200px;
+  padding: 20px;
+  margin: 10px;
+  font-size: 20px;
+  color: white;
+  background: $primary-color;
+  outline: none;
+}
+
+button:hover {
+  background: $secondary-color;
+}
