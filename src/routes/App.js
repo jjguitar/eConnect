@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Layout from '../containers/Layout';
 import Login from '../containers/Login';
 import Home from '../containers/Home';
+import NotFound from '../containers/NotFound';
+import Terms from '../containers/Terms';
 
 const App = () => (
   <BrowserRouter>
@@ -10,9 +12,10 @@ const App = () => (
       <Switch>
         <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
+        <Route exact path='/terms' component={Terms} />
         {/* <Route exact path='/register' component={Register} />
-        <Route exact path='/player/:id' component={isLogged ? Player : Login} />
-        <Route component={NotFound} /> */}
+        <Route exact path='/player/:id' component={isLogged ? Player : Login} /> */}
+        <Route component={NotFound} />
       </Switch>
     </Layout>
   </BrowserRouter>

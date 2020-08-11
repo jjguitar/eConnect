@@ -1,0 +1,13 @@
+@import '../global_var.scss';
+.terms {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 120px);
+  color: $primary-color;
+  background: white;
+  font-size: 18px;
+  padding: 0 30px;
+  text-align: center;
+}

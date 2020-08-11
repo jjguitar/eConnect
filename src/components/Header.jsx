@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import '../assets/styles/templates/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
@@ -12,8 +13,16 @@ const Header = () => {
       <div className='header__profile'>
         <img src={logo} alt='logo' width='70' />
         <ul>
-          <li><a href='/'>Cuenta</a></li>
-          <li><a href='/'>Cerrar sesión</a></li>
+          <li>
+            <Link to='/'>
+              Cuenta
+            </Link>
+          </li>
+          <li>
+            <Link to='/login'>
+              Cerrar sesión
+            </Link>
+          </li>
         </ul>
       </div>
     </div>

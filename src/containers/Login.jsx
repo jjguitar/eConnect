@@ -21,7 +21,7 @@ const Login = () => {
             <FontAwesomeIcon icon={faTwitter} />
           </button>
           <button type='submit' className='login__form-button'>
-            <p>Gmail</p>
+            <p>Google</p>
             <FontAwesomeIcon icon={faGoogle} />
           </button>
         </form>
