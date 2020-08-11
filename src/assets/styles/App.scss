@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap');
 @import './global_var.scss';
-@import './atoms/button.scss';
 
 // Propiedades y selectores deben ordenarse de la siguiente forma:
 // Propiedades del modelo de caja (display, width, height, margin, etc)
@@ -21,14 +20,20 @@
 // }
 
 body {
-  display: flex;
-  min-height: 100vh;
-  align-items: center;
-  justify-content: center;
   font-family: 'Lato', sans-serif;
+  background: $primary-color;
 }
 
 * {
   margin: 0;
   padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul, li {
+  list-style: none;
 }

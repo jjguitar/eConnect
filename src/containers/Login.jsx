@@ -3,18 +3,18 @@ import '../assets/styles/App.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faTwitter, faGoogle } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/images/logo.png';
-import '../assets/styles/components/Login.scss';
+import '../assets/styles/templates/Login.scss';
 
 const Login = () => {
   return (
-    <>
-      <section className='login'>
-        <img src={logo} alt='logo' width='100' />
+    <div className='login'>
+      <section className='login__container'>
+        <img src={logo} alt='logo' width='70' />
         <h2>Iniciar sesión</h2>
         <form className='login__form'>
           <button type='submit' className='login__form-button'>
             <p>Facebook</p>
-            <FontAwesomeIcon icon={faFacebookSquare} />            {/* <i class="fab fa-facebook-f"></i> */}
+            <FontAwesomeIcon icon={faFacebookSquare} />
           </button>
           <button type='submit' className='login__form-button'>
             <p>Twitter</p>
@@ -26,7 +26,7 @@ const Login = () => {
           </button>
         </form>
       </section>
-    </>
+    </div>
   );
 };
 

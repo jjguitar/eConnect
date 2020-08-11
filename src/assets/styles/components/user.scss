@@ -1,0 +1,21 @@
+@import '../global_var.scss';
+
+.user__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  margin-bottom: 10px;
+  color: white;
+  background: $secondary-color;
+}
+
+.user__profile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  img {
+    border-radius: 50%;
+    margin-right: 30px;
+  }
+}
