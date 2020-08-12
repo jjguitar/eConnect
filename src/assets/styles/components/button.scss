@@ -1,3 +1,5 @@
+@import '../global_var.scss';
+
 button {
   border: none;
   border-radius: 25px;
@@ -9,6 +11,9 @@ button {
   color: white;
   background: $primary-color;
   outline: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button:hover {

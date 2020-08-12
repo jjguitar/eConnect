@@ -1,12 +1,29 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable camelcase */
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { sendInfo } from '../actions/index';
 import '../assets/styles/components/user.scss';
 
-const User = ({ cover, first_name, last_name, tags }) => {
-  console.log(tags);
+const User = (props) => {
+  // console.log(props);
+  const { cover, first_name, last_name, rol, tags, id } = props;
+  const handleSendInfo = () => {
+    props.sendInfo(
+      {
+        cover,
+        first_name,
+        last_name,
+        rol,
+        tags,
+        id,
+      },
+    );
+  };
   return (
     <div className='user__container'>
       <div className='user__profile'>
@@ -16,11 +33,16 @@ const User = ({ cover, first_name, last_name, tags }) => {
           <h4>{last_name}</h4>
         </div>
       </div>
-      <a href='/'>
-        <FontAwesomeIcon icon={faAngleRight} className='header__back' />
-      </a>
+      <Link to={`/profile/${id}`}>
+        <FontAwesomeIcon icon={faAngleRight} className='header__back' onClick={handleSendInfo} />
+      </Link>
     </div>
   );
 };
 
-export default User;
+const mapDispatchToProps = {
+  sendInfo,
+};
+
+export default connect(null, mapDispatchToProps)(User);
+

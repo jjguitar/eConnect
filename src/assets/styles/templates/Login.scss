@@ -37,13 +37,23 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
-    button {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
     svg {
       margin-left: 10px;
     }
   }
+}
+
+.login--form__input {
+  background-color: $secondary-color;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  outline: none;
+  padding: 10px 15px;
+  border-bottom: 1px solid white;
+  margin-bottom: 20px;
+}
+
+.login--form__input::placeholder {
+  color: white;
 }
