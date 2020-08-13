@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import '../assets/styles/templates/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
-import logo from '../assets/images/logowhite.png';
 import { logoutRequest } from '../actions/index';
 
 const Header = (props) => {
@@ -27,7 +26,7 @@ const Header = (props) => {
       {/* onClick={handleBtnBack} */}
       <input type='text' className='header__search' placeholder='Buscar...' />
       <div className='header__profile'>
-        <img src={logo} alt='logo' width='70' />
+        <img src='https://www.ekklesiaviva.co/wp-content/uploads/2020/01/LOGO-PARA-WEB.png' alt='logo' width='70' />
         <ul>
           {
             hasUser ? (
