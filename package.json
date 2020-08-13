@@ -44,10 +44,10 @@
     "react-router-config": "^5.1.1",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
-    "webpack": "^4.44.1"
+    "webpack": "^4.44.1",
+    "@babel/core": "^7.11.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "babel-loader": "^8.1.0",
