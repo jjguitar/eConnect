@@ -1,4 +1,5 @@
 @import '../global_var.scss';
+@import '../mediaQuery.scss';
 
 .header {
   display: flex;
@@ -10,11 +11,21 @@
   border-bottom: 1px solid $secondary-color;
 }
 
+.header.isLogin {
+  .header__back, .header__search {
+    display: none;
+  }
+  justify-content: center;
+  .header__profile:hover ul, ul:hover {
+    display: none;
+  }
+}
+
 .header__back {
   font-size: 70px;
   margin-left: 30px;
   color: white;
-  font-weight: lighter;
+  font-weight: 100;
 }
 
 .header__profile {
@@ -28,6 +39,7 @@
     display: none;
     padding: 0;
     position: absolute;
+    color: white;
     text-align: right;
     width: 100px;
     margin: 70px 0 0 -40px;
@@ -58,4 +70,10 @@ ul:hover{
 
 .header__search::placeholder {
   color: rgba(255, 255, 255, 0.2);
+}
+
+@media only screen and (min-width: 375px) {
+  .header {
+    // background: red;
+  }
 }

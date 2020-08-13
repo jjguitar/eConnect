@@ -6,6 +6,7 @@ import Home from '../containers/Home';
 import NotFound from '../containers/NotFound';
 import Terms from '../containers/Terms';
 import Profile from '../containers/Profile';
+import Process from '../containers/Process';
 
 const App = () => (
   <BrowserRouter>
@@ -14,6 +15,7 @@ const App = () => (
         <Route exact path='/' component={Home} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/terms' component={Terms} />
+        <Route exact path='/process' component={Process} />
         <Route exact path='/profile/:id' component={Profile} />
         {/* <Route exact path='/register' component={Register} />
         <Route exact path='/player/:id' component={isLogged ? Player : Login} /> */}

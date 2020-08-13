@@ -6,6 +6,7 @@ import { faGoogle } from '@fortawesome/free-brands-svg-icons';
 import logo from '../assets/images/logo.png';
 import '../assets/styles/templates/Login.scss';
 import { loginRequest } from '../actions/index';
+import Header from '../components/Header';
 
 const Login = (props) => {
   const [form, setValues] = useState({
@@ -26,12 +27,14 @@ const Login = (props) => {
     console.log(form);
   };
   return (
-    <div className='login'>
-      <section className='login__container'>
-        <img src={logo} alt='logo' width='70' />
-        <h2>Iniciar sesión</h2>
-        <form className='login__form' onSubmit={handleSubmit}>
-          {/* <button type='submit' className='login__form-button'>
+    <>
+      <Header isLogin />
+      <div className='login'>
+        <section className='login__container'>
+          <img src={logo} alt='logo' width='70' />
+          <h2>Iniciar sesión</h2>
+          <form className='login__form' onSubmit={handleSubmit}>
+            {/* <button type='submit' className='login__form-button'>
             <p>Facebook</p>
             <FontAwesomeIcon icon={faFacebookSquare} />
           </button>
@@ -39,27 +42,28 @@ const Login = (props) => {
             <p>Twitter</p>
             <FontAwesomeIcon icon={faTwitter} />
           </button> */}
-          <input
-            name='email'
-            type='text'
-            className='login--form__input'
-            placeholder='Correo'
-            onChange={handleInput}
-          />
-          <input
-            name='password'
-            type='password'
-            className='login--form__input'
-            placeholder='Contraseña'
-            onChange={handleInput}
-          />
-          <button type='submit' className='login__form-button'>
-            <p>Google</p>
-            <FontAwesomeIcon icon={faGoogle} />
-          </button>
-        </form>
-      </section>
-    </div>
+            <input
+              name='email'
+              type='text'
+              className='login--form__input'
+              placeholder='Correo'
+              onChange={handleInput}
+            />
+            <input
+              name='password'
+              type='password'
+              className='login--form__input'
+              placeholder='Contraseña'
+              onChange={handleInput}
+            />
+            <button type='submit' className='login__form-button'>
+              <p>Google</p>
+              <FontAwesomeIcon icon={faGoogle} />
+            </button>
+          </form>
+        </section>
+      </div>
+    </>
   );
 };
 

@@ -1,31 +1,55 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import classNames from 'classnames';
 import '../assets/styles/templates/Header.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import logo from '../assets/images/logowhite.png';
+import { logoutRequest } from '../actions/index';
 
 const Header = (props) => {
+  const { user, isLogin } = props;
+  const hasUser = Object.keys(user).length > 0;
+
+  const handleLogout = () => {
+    props.logoutRequest({});
+  };
+
+  const headerClass = classNames('header', {
+    isLogin,
+  });
+
   const handleBtnBack = () => window.history.back();
   return (
-    <div className='header'>
+    <div className={headerClass}>
       <FontAwesomeIcon icon={faAngleLeft} className='header__back' onClick={handleBtnBack} />
       {/* onClick={handleBtnBack} */}
       <input type='text' className='header__search' placeholder='Buscar...' />
       <div className='header__profile'>
         <img src={logo} alt='logo' width='70' />
         <ul>
-          <li>
-            <Link to='/'>
-              Cuenta
-            </Link>
-          </li>
-          <li>
-            <Link to='/login'>
-              Cerrar sesión
-            </Link>
-          </li>
+          {
+            hasUser ? (
+              <li>
+                <Link to='/'>
+                  Name
+                </Link>
+              </li>
+            ) :
+              null
+          }
+          {
+            hasUser ?
+              <li><a href='#logout' onClick={handleLogout}>Cerrar sesión</a></li> :
+              (
+                <li>
+                  <Link to='/login'>
+                    Iniciar sesión
+                  </Link>
+                </li>
+              )
+          }
         </ul>
       </div>
     </div>
@@ -33,7 +57,13 @@ const Header = (props) => {
 };
 
 const mapStateToProps = (state) => {
-  return state;
+  return {
+    user: state.user,
+  };
 };
 
-export default connect(mapStateToProps, null)(Header);
+const mapDispatchToProps = {
+  logoutRequest,
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

@@ -1,9 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
 import process from '../assets/images/lifetrack.png';
 
-const Process = () => {
+const ProcessCard = () => {
   return (
     <div className='process'>
       <div className='process__container-details'>
@@ -12,12 +13,12 @@ const Process = () => {
           <h2>LifeTrack</h2>
           <h4>Unsubscribe</h4>
         </div>
-        <a href='/'>
+        <Link to='/process'>
           <FontAwesomeIcon icon={faAngleRight} className='header__back' />
-        </a>
+        </Link>
       </div>
     </div>
   );
 };
 
-export default Process;
+export default ProcessCard;

@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "start": "webpack-dev-server --open --mode development --host 192.168.0.4"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +19,7 @@
     "@fortawesome/react-fontawesome": "^0.1.11",
     "babel-eslint": "^10.1.0",
     "bootstrap": "^4.5.2",
+    "classnames": "^2.2.6",
     "eslint": "^7.6.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-plugin-import": "^2.22.0",

@@ -57,3 +57,12 @@
 .login--form__input::placeholder {
   color: white;
 }
+
+
+@media only screen and (min-width: 375px) {
+  .login__container {
+    width: 400px;
+    height: 600px;
+    border: 1px solid $primary-color;
+  }
+}
