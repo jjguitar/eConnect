@@ -1,12 +1,16 @@
 {
   "name": "react-basic-project",
   "version": "1.0.0",
+  "engines": {
+    "node": "12.16.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "start": "webpack-dev-server --open --mode development --host 192.168.0.4"
+    "start": "node src/index.js",
+    "start:dev": "webpack-dev-server --open --mode development"
   },
   "keywords": [],
   "author": "",
