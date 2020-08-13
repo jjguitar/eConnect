@@ -15,7 +15,6 @@ import initialState from '../frontend/initialState';
 import Layout from '../frontend/containers/Layout';
 
 dotenv.config();
-
 const { ENV, PORT } = process.env;
 const app = express();
 
